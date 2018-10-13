@@ -12,7 +12,7 @@
     <form id="upForm">
       <input name="myFile" type="file" />
       <br><br><br><br>
-      <input type="button" class="action" value="データ追加" onclick="google.script.run.csvImportScript(this.parentNode)" />
+      <input type="button" class="action" value="データ追加" onclick="google.script.run.csvImportMain(this.parentNode.myFile)" />
     </form>
   </div>
 </body>

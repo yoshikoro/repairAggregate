@@ -1,6 +1,6 @@
 export default class importCsvLib {
-  sendCsv(theForm: any): string[][] {
-    const fileBlob = theForm.myFile;
+  sendCsv(file: any): string[][] {
+    const fileBlob = file;
     return this.csvChange(fileBlob);
   }
   csvChange(filelist:any): string[][] {
@@ -13,7 +13,5 @@ export default class importCsvLib {
     var data: string[][] = Utilities.parseCsv(blob);
     return data;
   }
-  csvImportScript(formFile:any) {
-    const data: string[][] = this.sendCsv(formFile);
-  }
+
 }
