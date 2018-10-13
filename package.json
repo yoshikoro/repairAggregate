@@ -1,0 +1,24 @@
+{
+  "name": "gasjoin",
+  "version": "1.0.0",
+  "description": "mytemp",
+  "main": "localTest.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/google-apps-script": "0.0.28",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.14.3",
+    "ts-node": "7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "3.1.2"
+  },
+  "scripts": {
+    "tslint": "tslint --fix **/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yoshikoro",
+  "license": "MIT"
+}
