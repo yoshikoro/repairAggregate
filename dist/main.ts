@@ -1,4 +1,5 @@
 import csv from "./importCsv"
+import dp from "./duplicate"
 import {repairControl} from "./rapair"
 function doGet():any {
   return showCsvUploader();
@@ -13,6 +14,8 @@ function showCsvUploader():any {
 
 function csvImportMain(targetNode:any):void{
   const importCSV = new csv;
+  const duplicate = new dp;
   let data = importCSV.csvChange(targetNode);
+
   repairControl(data);
 }

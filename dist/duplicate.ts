@@ -1,13 +1,15 @@
-export class duplicateClass {
+export default class duplicateClass {
   private id: string;
   private shNum: number;
-  constructor(id: string, shNum: number) {
+  private targetColumn:number;
+  constructor(id: string, shNum: number,targetColumn:number) {
     this.id = id;
     this.shNum = shNum;
+    this.targetColumn = targetColumn;
   }
   duplicateList(listArray?: string[][]): string[] {
     const list = this.getList(listArray);
-    const list1Dim = this.get1DimArray(list, 2);
+    const list1Dim = this.get1DimArray(list, this.targetColumn);
     return this.duplicateArray(list1Dim);
   }
 
@@ -28,7 +30,7 @@ export class duplicateClass {
   ): string[] {
     let targetArray: string[] = [];
     for (let i = 0; i < listArray.length; i++) {
-      targetArray.push(listArray[i][targetColumn]);
+      targetArray.push(String(listArray[i][targetColumn]));
     }
 
     return targetArray;
