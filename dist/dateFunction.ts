@@ -33,7 +33,7 @@ export default class dateFunc {
     const retyms = yms;
     return retyms;
   }
-  dateCompari(targetDate: string, plusDate: number) {
+  dateCompari(targetDate: string, plusDate: number):string {
     var target = new Date(targetDate);
     var toD = new Date();
     var myD = new Date();
