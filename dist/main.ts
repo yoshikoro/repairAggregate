@@ -14,7 +14,6 @@ function showCsvUploader():any {
 
 function csvImportMain(targetNode:any):void{
   const importCSV = new csv;
-  const duplicate = new dp;
   let data = importCSV.csvChange(targetNode);
 
   repairControl(data);
