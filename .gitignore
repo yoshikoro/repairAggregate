@@ -12,10 +12,10 @@ node_modules/
 
 # Build directory
 testOutDir/
-
+dist/
 
 # Temp
-src/
+//
 
 # clasp
 .clasp.json

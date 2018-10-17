@@ -1,8 +1,8 @@
 export default class duplicateClass {
   private id: string;
   private shNum: number;
-  private targetColumn:number;
-  constructor(id: string, shNum: number,targetColumn:number) {
+  private targetColumn: number;
+  constructor(id: string, shNum: number, targetColumn: number) {
     this.id = id;
     this.shNum = shNum;
     this.targetColumn = targetColumn;
@@ -24,10 +24,7 @@ export default class duplicateClass {
       return listArray;
     }
   }
-  private get1DimArray(
-    listArray: string[][] | object[][],
-    targetColumn: number
-  ): string[] {
+  private get1DimArray(listArray: string[][] | object[][], targetColumn: number): string[] {
     let targetArray: string[] = [];
     for (let i = 0; i < listArray.length; i++) {
       targetArray.push(String(listArray[i][targetColumn]));

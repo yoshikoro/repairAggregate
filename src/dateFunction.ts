@@ -1,6 +1,6 @@
 export default class dateFunc {
   myyearday(ans: string): string {
-    var fmday: string = Utilities.formatDate(new Date(), "Asia/Tokyo", "MM/dd");
+    var fmday: string = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'MM/dd');
     var now = new Date();
     var year = now.getFullYear();
     var stryear = String(year);
@@ -18,34 +18,34 @@ export default class dateFunc {
     } else if (day > 9) {
       strday = strday;
     }
-    var yms: string = "";
-    if (ans == "short") {
+    var yms: string = '';
+    if (ans == 'short') {
       yms = stryear + strmonth + strday;
-    } else if (ans == "slush") {
-      yms = stryear + "/" + strmonth + "/" + strday;
+    } else if (ans == 'slush') {
+      yms = stryear + '/' + strmonth + '/' + strday;
     } else if (ans == undefined) {
       yms = stryear + strmonth;
-    } else if (ans == "month") {
+    } else if (ans == 'month') {
       yms = strmonth;
-    } else if (ans == "day") {
+    } else if (ans == 'day') {
       yms = strday;
     }
     const retyms = yms;
     return retyms;
   }
-  dateCompari(targetDate: string, plusDate: number):string {
+  dateCompari(targetDate: string, plusDate: number): string {
     var target = new Date(targetDate);
     var toD = new Date();
     var myD = new Date();
     var day = myD.getDate() + plusDate;
     myD.setDate(day);
-    var flgstr: string = "";
+    var flgstr: string = '';
     if (myD >= target && target >= toD) {
-      flgstr = "just";
+      flgstr = 'just';
     } else if (toD > target) {
-      flgstr = "small";
+      flgstr = 'small';
     } else {
-      flgstr = "elseDay";
+      flgstr = 'elseDay';
     }
     return flgstr;
   }
@@ -76,14 +76,14 @@ export default class dateFunc {
     } else if (day > 9) {
       strday = strday;
     }
-    var yms: string = "";
-    if (ans == "short") {
+    var yms: string = '';
+    if (ans == 'short') {
       var yms = stryear + strmonth + strday;
-    } else if (ans == "long") {
-      var yms = stryear + "/" + strmonth + "/" + strday;
-    } else if (ans == "yyyyMM") {
+    } else if (ans == 'long') {
+      var yms = stryear + '/' + strmonth + '/' + strday;
+    } else if (ans == 'yyyyMM') {
       var yms = stryear + strmonth;
-    } else if (ans == "yyyy") {
+    } else if (ans == 'yyyy') {
       var yms = stryear;
     }
     return yms;

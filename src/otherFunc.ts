@@ -1,13 +1,13 @@
-import dup from "./duplicate";
+import dup from './duplicate';
 export default class otherFunc {
   constructor() {}
   zeropad(value: string, len: number): string[] {
     var con = [];
-    var zero: string = "";
+    var zero: string = '';
     if (value.length < len) {
       value = value.toString();
       for (let index = 0; index < len; index++) {
-        zero += "0";
+        zero += '0';
       }
       value = zero + value;
       value = value.slice(value.length - len);
@@ -19,7 +19,7 @@ export default class otherFunc {
     const bool = DriveApp.getFilesByName(nameStr).hasNext();
     let list: GoogleAppsScript.Drive.File;
     if (bool == false) {
-      return "noData";
+      return 'noData';
     } else {
       list = DriveApp.getFilesByName(nameStr).next();
     }
@@ -44,7 +44,7 @@ export default class otherFunc {
   }
   copysp(filename: string, tempName: string, folderName: string): any {
     var mydate = new Date();
-    var year: string = Utilities.formatDate(mydate, "Asia/Tokyo", "yyyy");
+    var year: string = Utilities.formatDate(mydate, 'Asia/Tokyo', 'yyyy');
     var drivefile = DriveApp.getFilesByName(tempName).next();
     var fol = DriveApp.getFoldersByName(year + folderName).next();
     var id: string = drivefile.makeCopy(filename, fol).getId();
