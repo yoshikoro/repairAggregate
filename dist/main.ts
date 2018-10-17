@@ -1,6 +1,5 @@
 import csv from "./importCsv"
-import dp from "./duplicate"
-import {repairControl} from "./rapair"
+import {repairControl,createSheet} from "./rapair"
 function doGet():any {
   return showCsvUploader();
 }
@@ -14,7 +13,7 @@ function showCsvUploader():any {
 
 function csvImportMain(targetNode:any):void{
   const importCSV = new csv;
-  let data = importCSV.csvChange(targetNode);
-
+  let data = importCSV.sendCsv(targetNode.File);
+  createSheet("temp_etcR_etc",data)
   repairControl(data);
 }
